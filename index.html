@@ -22,7 +22,7 @@
 				margin: 0; /*make the buttons flush to the top*/
 			}
 			#header {
-				height: 60px;
+				height: 45px;
 				background: rgba(32,137,217,1);
 				background: -moz-linear-gradient(top, rgba(32,137,217,1) 0%, rgba(15,82,136,1) 100%);
 				background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(32,137,217,1)), color-stop(100%, rgba(15,82,136,1)));
@@ -35,7 +35,7 @@
 				text-shadow: none;
 			}
 			#bars-button {
-				margin: 7px;
+				padding: 0px 5px;
 			}
 			#navpanel {
 				background: #F6F6F6;
@@ -48,6 +48,7 @@
 				font-weight: bold;
 			}
 			#popupMenu a:hover {
+				transition: all 0.2s ease-in-out 0.1s;
 				background: #0cad72;
 				color: #fff;
 				font-size: 15px;
@@ -72,6 +73,7 @@
 				text-shadow: none;
 			}
 			#navpanel a:hover {
+				transition: all 0.2s ease-in-out 0.1s;
 				padding: 20px 0px;
 				background: #0cad72;
 				color: #fff;
@@ -81,6 +83,13 @@
 				font-size: 20px;
 				font-family: 'Ubuntu', sans-serif;
 				font-weight: 500;
+			}
+			#listBox li .ui-btn-icon-right:after {
+				display: none;
+			}
+			#listBox li a:hover {
+				transition: all 0.2s ease-in-out 0.1s;
+				text-shadow: none;
 			}
 			.pageLinks {
 				background: #fff;
@@ -102,6 +111,7 @@
 				text-shadow: none;
 			}
 			#feedForward:hover {
+				transition: all 0.2s ease-in-out 0.1s;
 				background: rgba(29,173,94,1);
 				background: -moz-linear-gradient(45deg, rgba(29,173,94,1) 0%, rgba(0,92,41,1) 100%);
 				background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(29,173,94,1)), color-stop(100%, rgba(0,92,41,1)));
@@ -113,11 +123,18 @@
 			}
 			.ui-li-aside.ui-li-count.ui-body-inherit {
 				padding: 5px 10px;
-				background: rgb(172, 172, 172);
+				background: rgb(28, 170, 92);
 				color: #fff;
 				text-shadow: none;
+				margin-right: -20px;
+				border: none;
 			}
-
+			.transparentButton {
+				background-color: transparent !important;
+				border: 0 !important;
+				-webkit-box-shadow: none;
+				box-shadow: none;
+			}
 		</style>
 
 	</head>
@@ -125,17 +142,14 @@
 
 		<section id="firstpage" data-role="page">
 			<div id="header" data-role="header" data-theme="a" data-position="fixed">
-				<h1 style="font-size: 22px;">DWIT News</h1>
-				<a id="bars-button" data-icon="grid"  class="ui-btn-left" style="margin-top:10px;" href="#navpanel">Menu</a>
+				<h1 style="font-size: 18px; font-weight: normal;">DWIT News</h1>
+				<a id="bars-button" class="ui-btn ui-icon-grid ui-btn-icon-notext ui-corner-all ui-nodisc-icon transparentButton"  class="ui-btn-left"  href="#navpanel"></a>
 
-				<a  data-theme="a"  data-icon="bars" data-position="right" href="#popupMenu"  style="margin-top:10px;margin-right: 5px;" data-rel="popup" data-transition="slideup" >Category</a>
+				<a  id="bars-button"  class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-nodisc-icon transparentButton"  data-position="right" href="#popupMenu"  style="margin-right: 5px;" data-rel="popup" data-transition="slide" ></a>
 
-				<div data-role="popup" id="popupMenu"  style="margin-top: 32px; ">
+				<div data-role="popup" id="popupMenu"  style="margin-top: 17px; border: none;">
 
-					<ul id="categoryLinks" data-role="listview" style="min-width:300px;">
-						<li id="headHeading" data-role="list-divider">
-							Select Category
-						</li>
+					<ul id="categoryLinks" data-role="listview" style="min-width:210px;">
 						<li>
 							<a href="#">View details</a>
 						</li>
@@ -154,11 +168,7 @@
 
 			<div  data-role="panel" id="navpanel" data-theme="a"	data-display="overlay" data-position="left">
 				<div  data-role="controlgroup" data-corners="false">
-					<ul  data-role="listview" >
-						<li id="headHeading" data-role="list-divider">
-							Select Menu
-						</li>
-					</ul>
+
 					<a href="#" data-role="button">Business</a>
 					<a href="#" data-role="button">Numbers</a>
 					<a href="#" data-role="button">Money</a>
@@ -174,26 +184,14 @@
 						<li>
 							<a href="index.html"> <h2>jQuery Team has Sucessffuly Launched jQuery Mobile Framework</h2>
 							<p >
-
-								<img src="img/user.png"/ style="margin-top: 5px;" height="20"><strong >Author: </strong><span> Author Name</span>
+								<img src="img/user.png"/ style="margin-top: 5px;" height="20"><strong>&nbsp;Author: </strong><span> Author Name</span>
 							</p>
 							<p>
-								<img src="img/clock2.png"/ style="position: relative;top: 3px;" height="15"><strong>Date:</strong><span>12/21/2015</span>
-							</p>
-							<p class="ui-li-aside ui-li-count">
-								<strong>5</strong>
-							</p> </a> </a>
-						</li>
-						<li>
-							<a href="index.html"> <h2>jQuery Team has Sucessffuly Launched jQuery Mobile Framework</h2>
-							<p>
-								<strong>Author: </strong><span> Author Name</span>
+								<img src="img/price-tag.png"/ style="position: relative;top: 2px;" height="15">
+								<strong>&nbsp;Category:</strong><span>Category Name</span>
 							</p>
 							<p>
-								<strong>Category:</strong><span>Category Name</span>
-							</p>
-							<p>
-								<strong>Date:</strong><span>12/21/2015</span>
+								<img src="img/clock2.png"/ style="position: relative;top: 2px;" height="15"><strong>&nbsp;Date:</strong><span>12/21/2015</span>
 							</p>
 							<p class="ui-li-aside ui-li-count">
 								<strong>5</strong>
@@ -201,29 +199,15 @@
 						</li>
 						<li>
 							<a href="index.html"> <h2>jQuery Team has Sucessffuly Launched jQuery Mobile Framework</h2>
-							<p>
-								<strong>Author: </strong><span> Author Name</span>
+							<p >
+								<img src="img/user.png"/ style="margin-top: 5px;" height="20"><strong>&nbsp;Author: </strong><span> Author Name</span>
 							</p>
 							<p>
-								<strong>Category:</strong><span>Category Name</span>
+								<img src="img/price-tag.png"/ style="position: relative;top: 2px;" height="15">
+								<strong>&nbsp;Category:</strong><span>Category Name</span>
 							</p>
 							<p>
-								<strong>Date:</strong><span>12/21/2015</span>
-							</p>
-							<p class="ui-li-aside ui-li-count">
-								<strong>5</strong>
-							</p> </a> </a>
-						</li>
-						<li>
-							<a href="index.html"> <h2>jQuery Team has Sucessffuly Launched jQuery Mobile Framework</h2>
-							<p>
-								<strong>Author: </strong><span> Author Name</span>
-							</p>
-							<p>
-								<strong>Category:</strong><span>Category Name</span>
-							</p>
-							<p>
-								<strong>Date:</strong><span>12/21/2015</span>
+								<img src="img/clock2.png"/ style="position: relative;top: 2px;" height="15"><strong>&nbsp;Date:</strong><span>12/21/2015</span>
 							</p>
 							<p class="ui-li-aside ui-li-count">
 								<strong>5</strong>
@@ -231,14 +215,31 @@
 						</li>
 						<li>
 							<a href="index.html"> <h2>jQuery Team has Sucessffuly Launched jQuery Mobile Framework</h2>
-							<p>
-								<strong>Author: </strong><span>Author Name</span>
+							<p >
+								<img src="img/user.png"/ style="margin-top: 5px;" height="20"><strong>&nbsp;Author: </strong><span> Author Name</span>
 							</p>
 							<p>
-								<strong>Category:</strong><span>Category Name</span>
+								<img src="img/price-tag.png"/ style="position: relative;top: 2px;" height="15">
+								<strong>&nbsp;Category:</strong><span>Category Name</span>
 							</p>
 							<p>
-								<strong>Date:</strong><span>12/21/2015</span>
+								<img src="img/clock2.png"/ style="position: relative;top: 2px;" height="15"><strong>&nbsp;Date:</strong><span>12/21/2015</span>
+							</p>
+							<p class="ui-li-aside ui-li-count">
+								<strong>5</strong>
+							</p> </a> </a>
+						</li>
+						<li>
+							<a href="index.html"> <h2>jQuery Team has Sucessffuly Launched jQuery Mobile Framework</h2>
+							<p >
+								<img src="img/user.png"/ style="margin-top: 5px;" height="20"><strong>&nbsp;Author: </strong><span> Author Name</span>
+							</p>
+							<p>
+								<img src="img/price-tag.png"/ style="position: relative;top: 2px;" height="15">
+								<strong>&nbsp;Category:</strong><span>Category Name</span>
+							</p>
+							<p>
+								<img src="img/clock2.png"/ style="position: relative;top: 2px;" height="15"><strong>&nbsp;Date:</strong><span>12/21/2015</span>
 							</p>
 							<p class="ui-li-aside ui-li-count">
 								<strong>5</strong>
@@ -260,14 +261,13 @@
 						<li>
 							<a id="feedForward"  data-icon="arrow-r" href="#"></a>
 						</li>
-
+						<li>
+							<a id="feedForward" data-icon="refresh" href="#" ></a>
 					</ul>
 				</div><!-- /navbar -->
 			</div><!-- /footer -->
 
 		</section>
-
-		<script></script>
 
 	</body>
 </html>
