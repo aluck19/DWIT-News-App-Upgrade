@@ -11,132 +11,136 @@
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
 		<style>
 			* {
-				font-size: 14px;
-				font-family: sans-serif;
+			font-size: 14px;
+			font-family: sans-serif;
 			}
 			/*this block should go in the styles.css file*/
 			.ui-panel-inner {
-				padding: 0px; /*make the buttons flush edge to edge*/
+			padding: 0px; /*make the buttons flush edge to edge*/
 			}
 			.ui-controlgroup {
-				margin: 0; /*make the buttons flush to the top*/
+			margin: 0; /*make the buttons flush to the top*/
 			}
 			#header {
-				height: 45px;
-				background: rgba(32,137,217,1);
-				background: -moz-linear-gradient(top, rgba(32,137,217,1) 0%, rgba(15,82,136,1) 100%);
-				background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(32,137,217,1)), color-stop(100%, rgba(15,82,136,1)));
-				background: -webkit-linear-gradient(top, rgba(32,137,217,1) 0%, rgba(15,82,136,1) 100%);
-				background: -o-linear-gradient(top, rgba(32,137,217,1) 0%, rgba(15,82,136,1) 100%);
-				background: -ms-linear-gradient(top, rgba(32,137,217,1) 0%, rgba(15,82,136,1) 100%);
-				background: linear-gradient(to bottom, rgba(32,137,217,1) 0%, rgba(15,82,136,1) 100%);
-				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2089d9', endColorstr='#0f5288', GradientType=0 );
-				color: #fff;
-				text-shadow: none;
+			height: 45px;
+			background: rgba(32,137,217,1);
+			background: -moz-linear-gradient(top, rgba(32,137,217,1) 0%, rgba(15,82,136,1) 100%);
+			background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(32,137,217,1)), color-stop(100%, rgba(15,82,136,1)));
+			background: -webkit-linear-gradient(top, rgba(32,137,217,1) 0%, rgba(15,82,136,1) 100%);
+			background: -o-linear-gradient(top, rgba(32,137,217,1) 0%, rgba(15,82,136,1) 100%);
+			background: -ms-linear-gradient(top, rgba(32,137,217,1) 0%, rgba(15,82,136,1) 100%);
+			background: linear-gradient(to bottom, rgba(32,137,217,1) 0%, rgba(15,82,136,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2089d9', endColorstr='#0f5288', GradientType=0 );
+			color: #fff;
+			text-shadow: none;
 			}
 			#bars-button {
-				padding: 0px 5px;
+			padding: 0px 5px;
+			background: none;
+			border: none;
+			box-shadow: none;
 			}
 			#navpanel {
-				background: #F6F6F6;
+			background: #F6F6F6;
 			}
 			#popupMenu a {
-				background: #F6F6F6;
-				color: #444;
-				text-shadow: none;
-				font-size: 15px;
-				font-weight: normal;
-				
+			background: #F6F6F6;
+			color: #444;
+			text-shadow: none;
+			font-size: 15px;
+			font-weight: normal;
 			}
 			#popupMenu a:hover {
-				transition: all 0.2s ease-in-out 0.1s;
-				background: #0cad72;
-				color: #fff;
-				font-size: 15px;
-				text-shadow: none;
-				font-weight: normal;
+			transition: all 0.2s ease-in-out 0.1s;
+			background: #0cad72;
+			color: #fff;
+			font-size: 15px;
+			text-shadow: none;
+			font-weight: normal;
 			}
 			#headHeading {
-				background: rgb(25, 114, 184);
-				color: #fff;
-				text-shadow: none;
-				font-family: 'Ubuntu', sans-serif;
-				font-size: 18px;
-				font-weight: 300;
+			background: rgb(25, 114, 184);
+			color: #fff;
+			text-shadow: none;
+			font-family: 'Ubuntu', sans-serif;
+			font-size: 18px;
+			font-weight: 300;
 			}
 			#categoryLinks .ui-btn-icon-right:after {
-				display: none;
+			display: none;
 			}
 			#navpanel a {
-				padding: 20px 0px;
-				background: #F6F6F6;
-				color: #444;
-				text-shadow: none;
-				font-weight: normal;
+			padding: 20px 0px;
+			background: #F6F6F6;
+			color: #444;
+			text-shadow: none;
+			font-weight: normal;
 			}
 			#navpanel a:hover {
-				transition: all 0.2s ease-in-out 0.1s;
-				padding: 20px 0px;
-				background: #0cad72;
-				color: #fff;
-				font-weight: normal;
-				text-shadow: none;
+			transition: all 0.2s ease-in-out 0.1s;
+			padding: 20px 0px;
+			background: #0cad72;
+			color: #fff;
+			font-weight: normal;
+			text-shadow: none;
 			}
 			#listBox li h2 {
-				font-size: 20px;
-				font-family: 'Ubuntu', sans-serif;
-				font-weight: 500;
+			font-size: 20px;
+			font-family: 'Ubuntu', sans-serif;
+			font-weight: 500;
 			}
 			#listBox li .ui-btn-icon-right:after {
-				display: none;
+			display: none;
 			}
 			#listBox li a:hover {
-				transition: all 0.2s ease-in-out 0.1s;
-				text-shadow: none;
-			}
-			.pageLinks {
-				background: #fff;
-			}
-			.pageLinks:hover {
-				background: #f;
+			transition: all 0.2s ease-in-out 0.1s;
+			text-shadow: none;
 			}
 			#feedForward {
-				background: rgba(29,173,94,1);
-				background: -moz-linear-gradient(top, rgba(29,173,94,1) 0%, rgba(0,92,41,1) 100%);
-				background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(29,173,94,1)), color-stop(100%, rgba(0,92,41,1)));
-				background: -webkit-linear-gradient(top, rgba(29,173,94,1) 0%, rgba(0,92,41,1) 100%);
-				background: -o-linear-gradient(top, rgba(29,173,94,1) 0%, rgba(0,92,41,1) 100%);
-				background: -ms-linear-gradient(top, rgba(29,173,94,1) 0%, rgba(0,92,41,1) 100%);
-				background: linear-gradient(to bottom, rgba(29,173,94,1) 0%, rgba(0,92,41,1) 100%);
-				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1dad5e', endColorstr='#005c29', GradientType=0 );
-				color: #fff;
-				font-size: 13px;
-				text-shadow: none;
+			background: rgba(29,173,94,1);
+			background: -moz-linear-gradient(top, rgba(29,173,94,1) 0%, rgba(0,92,41,1) 100%);
+			background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(29,173,94,1)), color-stop(100%, rgba(0,92,41,1)));
+			background: -webkit-linear-gradient(top, rgba(29,173,94,1) 0%, rgba(0,92,41,1) 100%);
+			background: -o-linear-gradient(top, rgba(29,173,94,1) 0%, rgba(0,92,41,1) 100%);
+			background: -ms-linear-gradient(top, rgba(29,173,94,1) 0%, rgba(0,92,41,1) 100%);
+			background: linear-gradient(to bottom, rgba(29,173,94,1) 0%, rgba(0,92,41,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1dad5e', endColorstr='#005c29', GradientType=0 );
+			color: #fff;
+			font-size: 13px;
+			text-shadow: none;
 			}
 			#feedForward:hover {
-				transition: all 0.2s ease-in-out 0.1s;
-				background: rgba(29,173,94,1);
-				background: -moz-linear-gradient(45deg, rgba(29,173,94,1) 0%, rgba(0,92,41,1) 100%);
-				background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(29,173,94,1)), color-stop(100%, rgba(0,92,41,1)));
-				background: -webkit-linear-gradient(45deg, rgba(29,173,94,1) 0%, rgba(0,92,41,1) 100%);
-				background: -o-linear-gradient(45deg, rgba(29,173,94,1) 0%, rgba(0,92,41,1) 100%);
-				background: -ms-linear-gradient(45deg, rgba(29,173,94,1) 0%, rgba(0,92,41,1) 100%);
-				background: linear-gradient(45deg, rgba(29,173,94,1) 0%, rgba(0,92,41,1) 100%);
-				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1dad5e', endColorstr='#005c29', GradientType=1 );
+			transition: all 0.2s ease-in-out 0.1s;
+			background: rgba(29,173,94,1);
+			background: -moz-linear-gradient(45deg, rgba(29,173,94,1) 0%, rgba(0,92,41,1) 100%);
+			background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(29,173,94,1)), color-stop(100%, rgba(0,92,41,1)));
+			background: -webkit-linear-gradient(45deg, rgba(29,173,94,1) 0%, rgba(0,92,41,1) 100%);
+			background: -o-linear-gradient(45deg, rgba(29,173,94,1) 0%, rgba(0,92,41,1) 100%);
+			background: -ms-linear-gradient(45deg, rgba(29,173,94,1) 0%, rgba(0,92,41,1) 100%);
+			background: linear-gradient(45deg, rgba(29,173,94,1) 0%, rgba(0,92,41,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1dad5e', endColorstr='#005c29', GradientType=1 );
 			}
 			.ui-li-aside.ui-li-count.ui-body-inherit {
-				padding: 5px 10px;
-				background: rgb(28, 170, 92);
-				color: #fff;
-				text-shadow: none;
-				margin-right: -20px;
-				border: none;
+			padding: 5px 10px;
+			background: rgb(28, 170, 92);
+			color: #fff;
+			text-shadow: none;
+			margin-right: -20px;
+			border: none;
 			}
 			.transparentButton {
-				background-color: transparent !important;
-				border: 0 !important;
-				-webkit-box-shadow: none;
-				box-shadow: none;
+			background-color: transparent !important;
+			border: 0 !important;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			}
+			img#mainLogo {
+			height: 40px;
+			margin-left: 40px;
+			}
+			a#mainSearch {
+			float: right;
+			margin-right: 40px;
 			}
 		</style>
 
@@ -145,10 +149,13 @@
 
 		<section id="firstpage" data-role="page">
 			<div id="header" data-role="header" data-theme="a" data-position="fixed">
-				<h1 style="font-size: 18px; font-weight: normal;">DWIT News</h1>
-				<a id="bars-button" class="ui-btn ui-icon-grid ui-btn-icon-notext ui-corner-all ui-nodisc-icon transparentButton"  class="ui-btn-left"  href="#navpanel"></a>
 
-				<a  id="bars-button"  class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-nodisc-icon transparentButton"  data-position="right" href="#popupMenu"  style="margin-right: 5px;" data-rel="popup" data-transition="slide" ></a>
+				<a id="bars-button" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-nodisc-icon transparentButton"  class="ui-btn-left"  href="#navpanel"></a>
+
+				 <img id="mainLogo" src="img/dwit_news_logo.png"/>
+				<a  id="bars-button"  data-position="right" href="#popupMenu"  style="margin-right: 5px;" data-rel="popup" data-transition="slide" ><img src="img/action.png"/></a>
+
+				<a  id="mainSearch" class="ui-btn ui-icon-search ui-btn-icon-notext ui-corner-all ui-nodisc-icon transparentButton"   href="#p"   data-rel="popup" data-transition="slide" ></a>
 
 				<div data-role="popup" id="popupMenu"  style="margin-top: 17px; border: none;">
 
@@ -169,7 +176,7 @@
 			</div>
 			<!-- header -->
 
-			<div  data-role="panel" id="navpanel" data-theme="a"	data-display="overlay" data-position="left">
+			<div  data-role="panel" id="navpanel" data-theme="a"	data-display="push" data-position="left">
 				<div  data-role="controlgroup" data-corners="false">
 
 					<a href="#" data-role="button">Business</a>
@@ -185,9 +192,10 @@
 				<div id="listBox">
 					<ul data-role="listview" >
 						<li>
-							<a href="index.html"> <h2>jQuery Team has Sucessffuly Launched jQuery Mobile Framework</h2>
+							<a  data-transition="slide" href="page.html"> <h2>jQuery Team has Sucessffuly Launched jQuery Mobile Framework</h2>
+								
 							<p >
-								<img src="img/user.png"/ style="margin-top: 5px;" height="20"><strong>&nbsp;Author: </strong><span> Author Name</span>
+								<img src="img/user.png"/ style="margin-top: 5px;position: relative;top: 1px;" height="20"><strong>&nbsp;Author: </strong><span> Author Name</span>
 							</p>
 							<p>
 								<img src="img/price-tag.png"/ style="position: relative;top: 2px;" height="15">
@@ -198,12 +206,12 @@
 							</p>
 							<p class="ui-li-aside ui-li-count">
 								<strong>5</strong>
-							</p> </a> </a>
+							</p> </a> 
 						</li>
 						<li>
-							<a href="index.html"> <h2>jQuery Team has Sucessffuly Launched jQuery Mobile Framework</h2>
+							<a  data-transition="slide" href="page.html"> <h2>jQuery Team has Sucessffuly Launched jQuery Mobile Framework</h2>
 							<p >
-								<img src="img/user.png"/ style="margin-top: 5px;" height="20"><strong>&nbsp;Author: </strong><span> Author Name</span>
+								<img src="img/user.png"/ style="margin-top: 5px;position: relative;top: 1px;" height="20"><strong>&nbsp;Author: </strong><span> Author Name</span>
 							</p>
 							<p>
 								<img src="img/price-tag.png"/ style="position: relative;top: 2px;" height="15">
@@ -214,12 +222,12 @@
 							</p>
 							<p class="ui-li-aside ui-li-count">
 								<strong>5</strong>
-							</p> </a> </a>
+							</p> </a>
 						</li>
 						<li>
-							<a href="index.html"> <h2>jQuery Team has Sucessffuly Launched jQuery Mobile Framework</h2>
+							<a  data-transition="slide" href="page.html"> <h2>jQuery Team has Sucessffuly Launched jQuery Mobile Framework</h2>
 							<p >
-								<img src="img/user.png"/ style="margin-top: 5px;" height="20"><strong>&nbsp;Author: </strong><span> Author Name</span>
+								<img src="img/user.png"/ style="margin-top: 5px;position: relative;top: 1px;" height="20"><strong>&nbsp;Author: </strong><span> Author Name</span>
 							</p>
 							<p>
 								<img src="img/price-tag.png"/ style="position: relative;top: 2px;" height="15">
@@ -230,12 +238,12 @@
 							</p>
 							<p class="ui-li-aside ui-li-count">
 								<strong>5</strong>
-							</p> </a> </a>
+							</p> </a> 
 						</li>
 						<li>
-							<a href="index.html"> <h2>jQuery Team has Sucessffuly Launched jQuery Mobile Framework</h2>
+							<a  data-transition="slide" href="page.html"> <h2>jQuery Team has Sucessffuly Launched jQuery Mobile Framework</h2>
 							<p >
-								<img src="img/user.png"/ style="margin-top: 5px;" height="20"><strong>&nbsp;Author: </strong><span> Author Name</span>
+								<img src="img/user.png"/ style="margin-top: 5px;position: relative;top: 1px;" height="20"><strong>&nbsp;Author: </strong><span> Author Name</span>
 							</p>
 							<p>
 								<img src="img/price-tag.png"/ style="position: relative;top: 2px;" height="15">
@@ -246,7 +254,7 @@
 							</p>
 							<p class="ui-li-aside ui-li-count">
 								<strong>5</strong>
-							</p> </a> </a>
+							</p> </a>
 						</li>
 					</ul>
 				</div><!-- listBox -->
@@ -264,8 +272,6 @@
 						<li>
 							<a id="feedForward"  data-icon="arrow-r" href="#"></a>
 						</li>
-						<li>
-							<a id="feedForward" data-icon="refresh" href="#" ></a>
 					</ul>
 				</div><!-- /navbar -->
 			</div><!-- /footer -->
