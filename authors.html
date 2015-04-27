@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DWIT News</title>
+
+		<!-- the three things that jQuery Mobile needs to work -->
+		<link rel="stylesheet" href="jquery.mobile-1.4.2/jquery.mobile-1.4.2.css" />
+		<script src="jquery-1.11.0.js" type="text/javascript"></script>
+		<script src="jquery.mobile-1.4.2/jquery.mobile-1.4.2.js" type="text/javascript"></script>
+
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body>
+
+		<section id="firstpage" data-role="page">
+			<div id="header" data-role="header" data-theme="a" data-position="fixed">
+
+				<a id="bars-button" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-nodisc-icon transparentButton"  class="ui-btn-left"  href="#navpanel"></a>
+
+				<img id="mainLogo" src="img/dwit_news_logo.png"/>
+
+				<a  id="bars-button"  data-position="right" href="#popupMenu"  style="margin-right: 5px;" data-rel="popup" data-transition="slide" ><img src="img/action.png"/></a>
+
+				<a  id="mainSearch" class="ui-btn ui-icon-search ui-btn-icon-notext ui-corner-all ui-nodisc-icon transparentButton"   href="#p"   data-rel="popup" data-transition="slide" ></a>
+
+				<div data-role="popup" id="popupMenu"  style="margin-top: 16px; border: none;margin-top: 16px; border: none;position: relative;left: 15px;">
+
+					<ul id="categoryLinks" data-role="listview" style="min-width:210px;" >
+						<li>
+							<a href="#">View details</a>
+						</li>
+						<li>
+							<a href="#">Edit</a>
+						</li>
+						<li>
+							<a href="#">Disable</a>
+						</li>
+
+					</ul>
+				</div>
+
+			</div>
+			<!-- header -->
+
+			<div  data-role="panel" id="navpanel" data-theme="a"	data-display="slidedown" data-position="left">
+				<div  data-role="controlgroup" data-corners="false">
+
+					<a href="about.html" data-role="button">About</a>
+					<a href="authors.html" data-role="button">Authors</a>
+					<a href="contact.html" data-role="button">Contact</a>
+					<a href="developers.html" data-role="button">Developers</a>
+				</div>
+			</div>
+			<!-- menu -->
+
+			<div class="ui-content" role="main">
+				<div id="authorSearch">
+					<ul data-role="listview" data-filter="true" data-filter-placeholder="Search Author">
+						<li><a href="#">Abhishek Gupta</a></li>
+						<li><a href="#">Subigya Kumar Nepal</a></li>	
+						<li><a href="#">Bhisan Bhandari</a></li>	
+						<li><a href="#">Suman Thapa</a></li>	
+						<li><a href="#">Sushil Pokhrel</a></li>		 
+					</ul>
+				</div><!-- authorSearch -->
+
+			</div>
+			<!-- content -->
+
+		</section>
+
+	</body>
+</html>
