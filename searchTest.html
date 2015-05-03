@@ -12,6 +12,58 @@
 		<meta name="viewport" content="width=device-width"/>
 		<link rel="stylesheet" href="css/style.css">
 
+		<style>
+			.searchbox {
+				right: 40px;
+				position: relative;
+				min-width: 50px;
+				width: 0%;
+				height: 40px;
+				float: right;
+				overflow: hidden;
+				-webkit-transition: width 0.3s;
+				-moz-transition: width 0.3s;
+				-ms-transition: width 0.3s;
+				-o-transition: width 0.3s;
+				transition: width 0.3s;
+			}
+			.searchbox-input {
+				color: #333;
+				font-size: 14px;
+				font-weight: normal;
+			}
+
+			.searchbox-icon, .searchbox-submit {
+				position: absolute;
+				top: 0;
+				right: 0;
+				padding: 0;
+				margin: 0;
+				border: 0;
+				outline: 0;
+				line-height: 50px;
+				text-align: center;
+				cursor: pointer;
+				color: #dcddd8;
+			}
+
+			.searchbox-open {
+				width: 60%;
+			}
+
+			.byline {
+				position: absolute;
+				top: 150px;
+				left: 30%;
+				text-align: center;
+				font-size: 18px;
+			}
+			.byline a {
+				text-decoration: none;
+				color: #d74b4b;
+			}
+		</style>
+
 	</head>
 	<body>
 
@@ -24,7 +76,11 @@
 
 				<a  id="bars-button"  data-position="right" href="#popupMenu"  style="margin-right: 5px;" data-rel="popup" data-transition="slide" ><img src="img/action.png"/></a>
 
-				<a  id="mainSearch" class="ui-btn ui-icon-search ui-btn-icon-notext ui-corner-all ui-nodisc-icon transparentButton"   href="#p"   data-rel="popup" data-transition="slide" ></a>
+				<form class="searchbox">
+					<input type="search" placeholder="Search" name="search" class="searchbox-input" onkeyup="buttonUp();" required>
+					<input type="submit" class="searchbox-submit">
+					<span class="searchbox-icon"><a  id="mainSearch" class="ui-btn ui-icon-search ui-btn-icon-notext ui-corner-all ui-nodisc-icon transparentButton"   href="#p"   data-rel="popup" data-transition="slide" ></a></span>
+				</form>
 
 				<div data-role="popup" id="popupMenu"  style="margin-top: 16px; border: none;margin-top: 16px; border: none;position: relative;left: 15px;">
 
@@ -98,6 +154,49 @@
 			</div><!-- /footer -->
 
 		</section>
+
+		<script>
+			$(document).ready(function() {
+				var submitIcon = $('.searchbox-icon');
+				var inputBox = $('.searchbox-input');
+				var searchBox = $('.searchbox');
+				var isOpen = false;
+				submitIcon.click(function() {
+					if (isOpen == false) {
+						searchBox.addClass('searchbox-open');
+						inputBox.focus();
+						isOpen = true;
+					} else {
+						searchBox.removeClass('searchbox-open');
+						inputBox.focusout();
+						isOpen = false;
+					}
+				});
+				submitIcon.mouseup(function() {
+					return false;
+				});
+				searchBox.mouseup(function() {
+					return false;
+				});
+				$(document).mouseup(function() {
+					if (isOpen == true) {
+						$('.searchbox-icon').css('display', 'block');
+						submitIcon.click();
+					}
+				});
+			});
+			function buttonUp() {
+				var inputVal = $('.searchbox-input').val();
+				inputVal = $.trim(inputVal).length;
+				if (inputVal !== 0) {
+					$('.searchbox-icon').css('display', 'none');
+				} else {
+					$('.searchbox-input').val('');
+					$('.searchbox-icon').css('display', 'block');
+				}
+			}
+
+		</script>
 
 	</body>
 </html>
